@@ -233,13 +233,24 @@
 // This is an isosceles triangle.
 /* Your answer here*/
 // let a, b, c;
-// (a = 70), (b = 40), (c = 70), a != 0, b != 0, c != 0, a + b + c == 180;
-// if (a == b && b == c && a == c) {
-//   console.log("Equilateral triangle");
-// } else if (a == b || b == c || c == a) {
-//   console.log("Isosceles triangle");
+// (a = 50), (b = 65), (c = 65);
+// if (
+//   a + b + c == 180 &&
+//   (a + b > c || b + c > a || a + c > b) &&
+//   a != 0 &&
+//   b != 0 &&
+//   c != 0
+// ) {
+//   console.log("VALID");
+//   if (a == b && b == c) {
+//     console.log("EQUILALTERAL");
+//   } else if (a == b || b == c || c == a) {
+//     console.log("ISOSCELES");
+//   } else {
+//     console.log("SCALENE");
+//   }
 // } else {
-//   console.log("Scalene triangle");
+//   console.log("NOT VALID");
 // }
 
 // 15. Write a program to check whether a triangle can be formed by the given value for the angles.
@@ -250,7 +261,13 @@
 /* Your answer here*/
 // let a, b, c;
 // (a = 20), (b = 10), (c = 150);
-// if (a + b + c == 180 && a != 0 && b != 0 && c != 0) {
+// if (
+//   a + b + c == 180 &&
+//   (a + b > c || b + c > a || a + c > b) &&
+//   a != 0 &&
+//   b != 0 &&
+//   c != 0
+// ) {
 //   console.log("Valid triangle");
 // } else {
 //   console.log("Invalid triangle");
@@ -264,6 +281,22 @@
 // This is a special character.
 // Hint: ASCII character
 /* Your answer here*/
+// let char;
+// char = 95;
+// if ((char >= 65 && char <= 90) || (char >= 97 && char <= 122)) {
+//   console.log("Alphabet");
+// } else if (char >= 48 && char <= 57) {
+//   console.log("Digit");
+// } else if (
+//   (char >= 32 && char <= 47) ||
+//   (char >= 58 && char <= 64) ||
+//   (char >= 91 && char <= 96) ||
+//   (char >= 123 && char <= 126)
+// ) {
+//   console.log("Special character");
+// } else {
+//   console.log("Invalid character");
+// }
 
 // 17. Write a  program to check whether an alphabet is a vowel or consonant.
 // Test Data :
@@ -271,12 +304,31 @@
 // Expected Output :
 // The alphabet is a consonant.
 /* Your answer here*/
-let alpha;
-if (alpha == a || alpha == e || alpha == i || alpha == o || alpha == u) {
-  console.log("alpha is a vowel");
-} else {
-  console.log("alpha is a consonant");
-}
+// let alphabet;
+// alphabet = "h";
+// if (
+//   (alphabet >= "a" && alphabet <= "z") ||
+//   (alphabet >= "A" && alphabet <= "Z")
+// ) {
+//   if (
+//     alphabet == "a" ||
+//     alphabet == "e" ||
+//     alphabet == "i" ||
+//     alphabet == "o" ||
+//     alphabet == "u" ||
+//     alphabet == "A" ||
+//     alphabet == "E" ||
+//     alphabet == "I" ||
+//     alphabet == "O" ||
+//     alphabet == "U"
+//   ) {
+//     console.log("alphabet is a vowel");
+//   } else {
+//     console.log("alphabet is a consonant");
+//   }
+// } else {
+//   console.log("char is not alphabet");
+// }
 
 // 18. Write a program to calculate profit and loss on a transaction.
 // Test Data :
@@ -285,17 +337,16 @@ if (alpha == a || alpha == e || alpha == i || alpha == o || alpha == u) {
 // Expected Output :
 // You can booked your profit amount : 200
 /* Your answer here*/
-// let buy_price, sell_price;
-// (buy_price = 500),
-//   (sell_price = 700),
-//   (profit = "sell_price-buy_price"),
-//   (loss = "buy_price-sell_price");
-// if (buy_price < sell_price) {
-//   console.log("You have profit");
-// } else if (sell_price > buy_price) {
-//   console.log("You have loss");
+// let CP, SP;
+// (CP = 500), (SP = 700);
+// if (CP < SP) {
+//   profit = SP - CP;
+//   console.log("profit", profit);
+// } else if (SP < CP) {
+//   loss = CP - SP;
+//   console.log("loss", loss);
 // } else {
-//   console.log("You are neutral");
+//   console.log("neutral");
 // }
 
 // 19. Write a program  to calculate and print the Electricity bill of a given customer. The customer id., name and unit consumed by the user should be taken from the keyboard and display the total amount to pay to the customer. The charge are as follow :
@@ -316,8 +367,26 @@ if (alpha == a || alpha == e || alpha == i || alpha == o || alpha == u) {
 // Amount Charges @Rs. 2.00 per unit : 1600.00
 // Surchage Amount : 240.00
 // Net Amount Paid By the Customer : 1840.00
-/* Your answer here
- */
+/* Your answer here*/
+// let a = 800;
+// if (a <= 199) {
+//   amount = a * 1.2;
+// } else if (a < 400) {
+//   amount = (a - 199) * 1.5 + 199 * 1.2;
+// } else if (a < 600) {
+//   amount = (a - 399) * 1.8 + 200 * 1.5 + 199 * 1.2;
+// } else {
+//   amount = (a - 599) * 2.0 + 200 * 1.8 + 200 * 1.5 + 199 * 1.2;
+// }
+
+// let new_amount = 0;
+// if (amount > 400) {
+//   new_amount = amount + (amount * 15) / 100;
+//   console.log(new_amount);
+// } else {
+//   console.log(amount);
+// }
+
 // 20. Write a program to accept a grade and declare the equivalent description :
 // Grade    Description
 // E    Excellent
@@ -329,31 +398,190 @@ if (alpha == a || alpha == e || alpha == i || alpha == o || alpha == u) {
 // Input the grade :A
 // Expected Output :
 // You have chosen : Average
-/* Your answer here
- */
+/* Your answer here*/
+// let p;
+// p = "F";
+// if (p == "E") {
+//   console.log("Excellent");
+// } else if (p == "V") {
+//   console.log("Very Good");
+// } else if (p == "G") {
+//   console.log("Good");
+// } else if (p == "A") {
+//   console.log("Average");
+// } else if (p == "F") {
+//   console.log("Fail");
+// } else {
+//   console.log("Invalid value");
+// }
+
 // 21. Write a program to read any day number in integer and display day name in the word.
 // Test Data :
 // 4
 // Expected Output :
 // Thursday
-/* Your answer here
- */
+/* Your answer here*/
+// const a = 5;
+// switch (a) {
+//   case 0:
+//     console.log("Sunday");
+//     break;
+//   case 1:
+//     console.log("Monday");
+//     break;
+//   case 2:
+//     console.log("Tuesday");
+//     break;
+//   case 3:
+//     console.log("Wednesday");
+//     break;
+//   case 4:
+//     console.log("Thursday");
+//     break;
+//   case 5:
+//     console.log("Friday");
+//     break;
+//   case 6:
+//     console.log("Saturday");
+//     break;
+//   default:
+//     console.log("Invalid day");
+// }
+
 // 22. Write a program to read any digit, display in the word.
 // Test Data :
 // 4
 // Expected Output :
 // Four
-/* Your answer here
- */
+/* Your answer here*/
+
+const d = 6;
+switch (d) {
+  case 0:
+    console.log("zero");
+    break;
+  case 1:
+    console.log("one");
+    break;
+  case 2:
+    console.log("two");
+    break;
+  case 3:
+    console.log("three");
+    break;
+  case 4:
+    console.log("four");
+    break;
+  case 5:
+    console.log("five");
+    break;
+  case 6:
+    console.log("six");
+    break;
+  case 7:
+    console.log("seven");
+    break;
+  case 8:
+    console.log("eight");
+    break;
+  case 9:
+    console.log("nine");
+    break;
+  default:
+    console.log("invalid number");
+}
+
 // 23. Write a program to read any Month Number in integer and display Month name in the word.
 // Test Data :
 // 4
 // Expected Output :
 // April
-/* Your answer here
- */
+/* Your answer here*/
+// let month = 10;
+// switch (month) {
+//   case 1:
+//     console.log("January");
+//     break;
+//   case 2:
+//     console.log("February");
+//     break;
+//   case 3:
+//     console.log("March");
+//     break;
+//   case 4:
+//     console.log("April");
+//     break;
+//   case 5:
+//     console.log("May");
+//     break;
+//   case 6:
+//     console.log("June");
+//     break;
+//   case 7:
+//     console.log("July");
+//     break;
+//   case 8:
+//     console.log("August");
+//     break;
+//   case 9:
+//     console.log("September");
+//     break;
+//   case 10:
+//     console.log("October");
+//     break;
+//   case 11:
+//     console.log("November");
+//     break;
+//   case 12:
+//     console.log("December");
+//     break;
+//   default:
+//     console.log("Invalid month");
+// }
+
 // 24. Write a program to read any Month Number in integer and display the number of days for this month.
 // Test Data :
 // 7
 // Expected Output :
 // Month have 31 days
+// let month = 5;
+// switch (month) {
+//   case 1:
+//     console.log("Month have 31 days");
+//     break;
+//   case 2:
+//     console.log("Month have 28/29 days");
+//     break;
+//   case 3:
+//     console.log("Month have 31 days");
+//     break;
+//   case 4:
+//     console.log("Month have 30 days");
+//     break;
+//   case 5:
+//     console.log("Month have 31 days");
+//     break;
+//   case 6:
+//     console.log("Month have 30 days");
+//     break;
+//   case 7:
+//     console.log("Month have 31 days");
+//     break;
+//   case 8:
+//     console.log("Month have 31 days");
+//     break;
+//   case 9:
+//     console.log("Month have 30 days");
+//     break;
+//   case 10:
+//     console.log("Month have 31 days");
+//     break;
+//   case 11:
+//     console.log("Month have 30 days");
+//     break;
+//   case 12:
+//     console.log("Month have 31 days");
+//     break;
+//   default:
+//     console.log("Invalid month");
+// }
