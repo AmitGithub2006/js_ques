@@ -161,6 +161,21 @@
 // No solution.
 /* Your answer here*/
 
+let a, b, c, discriminant, denominator, root1, root2;
+a = 1;
+b = 5;
+c = 7;
+discriminant = Math.sqrt(b * b - 4 * a * c);
+denominator = 2 * a;
+root1 = (-b + discriminant) / denominator;
+root2 = (-b - discriminant) / denominator;
+if (discriminant >= 0) {
+  console.log(root1);
+  console.log(root2);
+} else {
+  console.log("Roots are imaginary");
+}
+
 // 12. Write a program to read roll no, name and marks of three subjects and calculate the total, percentage and division.
 // Test Data :
 // Input the Roll Number of the student :784
@@ -368,24 +383,26 @@
 // Surchage Amount : 240.00
 // Net Amount Paid By the Customer : 1840.00
 /* Your answer here*/
-// let a = 800;
-// if (a <= 199) {
-//   amount = a * 1.2;
-// } else if (a < 400) {
-//   amount = (a - 199) * 1.5 + 199 * 1.2;
-// } else if (a < 600) {
-//   amount = (a - 399) * 1.8 + 200 * 1.5 + 199 * 1.2;
-// } else {
-//   amount = (a - 599) * 2.0 + 200 * 1.8 + 200 * 1.5 + 199 * 1.2;
+// let electricityUnit, billAmount;
+// electricityUnit = 800;
+// if (electricityUnit <= 199) {
+//   billAmount = electricityUnit * 1.2;
+// } else if (electricityUnit >= 200 && electricityUnit < 400) {
+//   billAmount = 199 * 1.2 + electricityUnit * 1.5;
+// } else if (electricityUnit >= 400 && electricityUnit < 600) {
+//   billAmount = 199 * 1.2 + (399 - 199) * 1.5 + electricityUnit * 1.8;
+// } else if (electricityUnit >= 600) {
+//   billAmount =
+//     199 * 1.2 + (399 - 199) * 1.5 + (599 - 399) * 1.8 + electricityUnit * 2.0;
 // }
-
-// let new_amount = 0;
-// if (amount > 400) {
-//   new_amount = amount + (amount * 15) / 100;
-//   console.log(new_amount);
-// } else {
-//   console.log(amount);
+// if (billAmount > 400) {
+//   billAmount = billAmount * 1.15;
+// } else if (billAmount < 100) {
+//   billAmount = 100;
 // }
+// console.log("Customer ID-NO :1001");
+// console.log("Customer Name :James");
+// console.log("billAmount:", billAmount);
 
 // 20. Write a program to accept a grade and declare the equivalent description :
 // Grade    Description
@@ -455,41 +472,41 @@
 // Four
 /* Your answer here*/
 
-const d = 6;
-switch (d) {
-  case 0:
-    console.log("zero");
-    break;
-  case 1:
-    console.log("one");
-    break;
-  case 2:
-    console.log("two");
-    break;
-  case 3:
-    console.log("three");
-    break;
-  case 4:
-    console.log("four");
-    break;
-  case 5:
-    console.log("five");
-    break;
-  case 6:
-    console.log("six");
-    break;
-  case 7:
-    console.log("seven");
-    break;
-  case 8:
-    console.log("eight");
-    break;
-  case 9:
-    console.log("nine");
-    break;
-  default:
-    console.log("invalid number");
-}
+// const d = 6;
+// switch (d) {
+//   case 0:
+//     console.log("zero");
+//     break;
+//   case 1:
+//     console.log("one");
+//     break;
+//   case 2:
+//     console.log("two");
+//     break;
+//   case 3:
+//     console.log("three");
+//     break;
+//   case 4:
+//     console.log("four");
+//     break;
+//   case 5:
+//     console.log("five");
+//     break;
+//   case 6:
+//     console.log("six");
+//     break;
+//   case 7:
+//     console.log("seven");
+//     break;
+//   case 8:
+//     console.log("eight");
+//     break;
+//   case 9:
+//     console.log("nine");
+//     break;
+//   default:
+//     console.log("invalid number");
+// }
 
 // 23. Write a program to read any Month Number in integer and display Month name in the word.
 // Test Data :
